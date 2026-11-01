@@ -1,0 +1,132 @@
+/* ==========================================================
+   header.css  |  Responsable: Byron
+   Navbar principal. Menú móvil hecho solo con CSS (checkbox).
+   NO modificar: copien el HTML de pages/_plantilla.html.
+   ========================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+}
+.site-header__fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--alto-header);
+  gap: var(--esp-5);
+}
+
+/* Logo */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--esp-2);
+  text-decoration: none;
+  color: var(--color-tinta);
+}
+.logo:hover { color: var(--color-tinta); }
+.logo__marca {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  background: var(--color-primario);
+  color: #fff;
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: 1.25rem;
+  border-radius: 10px 10px 10px 2px;
+  border-bottom: 4px solid var(--color-acento);
+}
+.logo__texto {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-5);
+}
+.nav__lista {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+  list-style: none;
+}
+.nav__enlace {
+  display: block;
+  padding: var(--esp-2) 0;
+  border-bottom: 3px solid transparent;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+.nav__enlace:hover { color: var(--color-primario); }
+.nav__enlace[aria-current="page"] {
+  color: var(--color-primario);
+  border-bottom-color: var(--color-acento);
+}
+.nav__cta { padding: 0.6rem 1.1rem; white-space: nowrap; }
+
+/* Botón hamburguesa (solo móvil) */
+.menu-check {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.menu-boton {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: var(--radio-s);
+}
+.menu-boton span,
+.menu-boton span::before,
+.menu-boton span::after {
+  position: absolute;
+  left: 11px;
+  width: 22px;
+  height: 2px;
+  background: var(--color-tinta);
+  content: "";
+  transition: transform 0.2s, background-color 0.2s;
+}
+.menu-boton span { top: 21px; }
+.menu-boton span::before { left: 0; top: -7px; }
+.menu-boton span::after  { left: 0; top: 7px; }
+.menu-check:focus-visible + .menu-boton { outline: 3px solid var(--color-acento); }
+.menu-check:checked + .menu-boton span { background: transparent; }
+.menu-check:checked + .menu-boton span::before { transform: translateY(7px) rotate(45deg); }
+.menu-check:checked + .menu-boton span::after  { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 1040px) {
+  .menu-boton { display: block; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--esp-4);
+    padding: var(--esp-4) var(--esp-5) var(--esp-5);
+    background: var(--color-superficie);
+    border-bottom: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-media);
+  }
+  .menu-check:checked ~ .nav { display: flex; }
+  .nav__lista { flex-direction: column; align-items: stretch; gap: 0; }
+  .nav__enlace { padding: var(--esp-3) 0; border-bottom: 1px solid var(--color-borde); }
+  .nav__enlace[aria-current="page"] { border-bottom-color: var(--color-acento); }
+}

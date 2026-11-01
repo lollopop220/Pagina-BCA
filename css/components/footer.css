@@ -1,0 +1,64 @@
+/* ==========================================================
+   footer.css  |  Responsable: Byron
+   Pie de página común. NO modificar.
+   ========================================================== */
+.site-footer {
+  background: var(--color-tinta);
+  color: #C9D6D2;
+  font-size: 0.97rem;
+}
+.site-footer a { color: #C9D6D2; text-decoration: none; }
+.site-footer a:hover { color: var(--color-acento); text-decoration: underline; }
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: var(--esp-6);
+  padding-block: var(--esp-7);
+}
+.site-footer .logo { color: #fff; margin-bottom: var(--esp-3); }
+.site-footer .logo:hover { color: #fff; text-decoration: none; }
+.site-footer__desc { max-width: 32ch; }
+
+.site-footer__titulo {
+  margin-bottom: var(--esp-3);
+  font-size: 1rem;
+  color: #fff;
+}
+.site-footer__lista { list-style: none; display: grid; gap: var(--esp-2); }
+.site-footer__contacto { font-style: normal; display: grid; gap: var(--esp-2); }
+
+.site-footer__redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+  list-style: none;
+  margin-top: var(--esp-4);
+}
+.site-footer__redes a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.site-footer__base {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-block: var(--esp-4);
+  font-size: 0.88rem;
+}
+.site-footer__base .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--esp-3);
+}
+.site-footer__legal { display: flex; flex-wrap: wrap; gap: var(--esp-4); list-style: none; }
+
+@media (max-width: 900px) {
+  .site-footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .site-footer__grid { grid-template-columns: 1fr; padding-block: var(--esp-6); }
+}

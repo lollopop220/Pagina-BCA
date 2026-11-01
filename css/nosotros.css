@@ -1,0 +1,87 @@
+/* ==========================================================
+   nosotros.css  |  Responsable: Byron  |  Página: pages/nosotros.html
+   Prefijo de clases: .nos-
+   ========================================================== */
+.nos-hero { background: var(--color-tinta); color: #C9D6D2; }
+.nos-hero__contenido { padding-block: var(--esp-8); }
+.nos-hero h1, .nos-hero p { max-width: 40rem; }
+.nos-hero h1 { color: #fff; }
+.nos-hero p { font-size: 1.15rem; }
+
+/* ---------- Historia + línea de tiempo ---------- */
+.nos-historia { display: grid; grid-template-columns: 1fr 1fr; gap: var(--esp-7); align-items: start; }
+.nos-linea { list-style: none; border-left: 3px solid var(--color-borde); padding-left: var(--esp-5); }
+.nos-linea li { position: relative; padding-bottom: var(--esp-5); }
+.nos-linea li:last-child { padding-bottom: 0; }
+.nos-linea li::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--esp-5) * -1 - 10px);
+  top: 6px;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  background: var(--color-acento);
+  border: 3px solid var(--color-superficie);
+  box-shadow: 0 0 0 2px var(--color-primario);
+}
+.nos-linea strong { font-family: var(--fuente-titulos); font-size: 1.2rem; color: var(--color-primario); }
+.nos-linea p { margin: 0; color: var(--color-texto-suave); }
+
+/* ---------- Misión / visión / valores ---------- */
+.nos-pilares { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--esp-5); }
+.nos-pilar {
+  padding: var(--esp-5);
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-top: 5px solid var(--color-primario);
+  border-radius: var(--radio-m);
+}
+.nos-pilar:nth-child(2) { border-top-color: var(--color-acento); }
+.nos-pilar:nth-child(3) { border-top-color: var(--color-tinta); }
+.nos-pilar ul { padding-left: 1.2rem; }
+.nos-pilar li + li { margin-top: var(--esp-1); }
+
+/* ---------- Cifras ---------- */
+.nos-cifras { background: var(--color-primario); color: #fff; }
+.nos-cifras__lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--esp-5);
+  padding-block: var(--esp-7);
+  list-style: none;
+}
+.nos-cifras strong { display: block; font-family: var(--fuente-titulos); font-size: 2.2rem; font-weight: 800; line-height: 1.1; }
+.nos-cifras span { color: #D5ECE6; }
+
+/* ---------- Equipo directivo ---------- */
+.nos-equipo { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--esp-5); list-style: none; }
+.nos-persona {
+  padding: var(--esp-5);
+  text-align: center;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-m);
+}
+.nos-persona__foto {
+  display: grid;
+  place-items: center;
+  width: 96px; height: 96px;
+  margin: 0 auto var(--esp-3);
+  border-radius: 50%;
+  background: var(--color-primario);
+  color: #fff;
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+.nos-persona:nth-child(even) .nos-persona__foto { background: var(--color-tinta); }
+.nos-persona h3 { margin-bottom: var(--esp-1); }
+.nos-persona p { margin: 0; color: var(--color-texto-suave); font-size: 0.97rem; }
+
+@media (max-width: 960px) {
+  .nos-historia, .nos-pilares { grid-template-columns: 1fr; }
+  .nos-cifras__lista, .nos-equipo { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .nos-cifras__lista, .nos-equipo { grid-template-columns: 1fr; }
+}

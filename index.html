@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BCA | Tu banco, sin filas ni letra pequeña</title>
+  <meta name="description" content="BCA: cuentas, tarjetas, ahorro y préstamos con banca en línea y atención cercana.">
+
+  <!-- Orden obligatorio: variables > global > header > footer > CSS propio -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR (plantilla común, no modificar) ===== -->
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="pages/cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="pages/inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="pages/prestamos.html">Préstamos</a></li>
+          <li><a class="nav__enlace" href="pages/beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace" href="pages/sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="pages/nosotros.html">Nosotros</a></li>
+          <li><a class="nav__enlace" href="pages/contacto.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="pages/login.html">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== FIN NAVBAR ===== -->
+
+  <main id="contenido">
+
+    <!-- ===== HERO ===== -->
+    <section class="home-hero" aria-labelledby="hero-titulo">
+      <div class="contenedor home-hero__grid">
+        <div>
+          <h1 id="hero-titulo">Abre tu cuenta en minutos y olvídate de las filas</h1>
+          <p class="home-hero__texto">Maneja tu dinero desde el celular, paga con tu tarjeta BCA y recibe puntos en cada compra.</p>
+          <div class="home-hero__acciones">
+            <a class="btn btn-acento" href="pages/cuentas-tarjetas.html">Abrir una cuenta</a>
+            <a class="btn btn-borde-claro" href="pages/prestamos.html">Ver préstamos</a>
+          </div>
+        </div>
+
+        <div class="home-visual" aria-hidden="true">
+          <div class="home-tarjeta home-tarjeta--atras">
+            <span class="home-tarjeta__marca">BCA</span>
+            <span class="home-tarjeta__fila"><span></span><span>12/29</span></span>
+          </div>
+          <div class="home-tarjeta home-tarjeta--frente">
+            <span class="home-tarjeta__marca">BCA</span>
+            <span class="home-tarjeta__chip"></span>
+            <span class="home-tarjeta__numero">4821 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 0937</span>
+            <span class="home-tarjeta__fila"><span>NOMBRE APELLIDO</span><span>Débito</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BANNER PRINCIPAL DE PROMOCIÓN ===== -->
+    <section class="home-banner" aria-label="Promoción destacada">
+      <div class="contenedor home-banner__fila">
+        <div>
+          <h2>Tarjeta BCA Oro sin anualidad el primer año</h2>
+          <p>Promoción válida hasta el 31 de diciembre de 2026.</p>
+        </div>
+        <a class="btn btn-primario" href="pages/cuentas-tarjetas.html">Solicitar mi tarjeta</a>
+      </div>
+    </section>
+
+    <!-- ===== ACCESOS RÁPIDOS ===== -->
+    <div class="contenedor">
+      <nav class="home-accesos" aria-label="Accesos rápidos">
+      <a class="home-acceso" href="pages/login.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        Banca en línea
+      </a>
+      <a class="home-acceso" href="pages/transferencia.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h14M14 4l4 4-4 4M20 16H6M10 12l-4 4 4 4"/></svg>
+        Hacer una transferencia
+      </a>
+      <a class="home-acceso" href="pages/sucursales.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Sucursales y cajeros
+      </a>
+      <a class="home-acceso" href="pages/contacto.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+        Hablar con soporte
+      </a>
+      </nav>
+    </div>
+
+    <!-- ===== PROMOCIONES ===== -->
+    <section class="seccion" aria-labelledby="promos-titulo">
+      <div class="contenedor">
+        <div class="seccion__intro">
+          <h2 id="promos-titulo">Promociones del mes</h2>
+          <p>Ofertas vigentes para clientes nuevos y actuales.</p>
+        </div>
+
+        <div class="home-promos">
+          <article class="home-promo">
+            <div class="home-promo__cabecera">0% anualidad</div>
+            <div class="home-promo__cuerpo">
+              <h3>Tarjeta BCA Oro</h3>
+              <p>Sin cuota de manejo el primer año y 2 puntos por cada dólar en compras.</p>
+              <a class="btn btn-borde" href="pages/cuentas-tarjetas.html">Ver tarjeta</a>
+            </div>
+          </article>
+
+          <article class="home-promo">
+            <div class="home-promo__cabecera">Desde 9,9%</div>
+            <div class="home-promo__cuerpo">
+              <h3>Préstamo personal</h3>
+              <p>Tasa anual desde 9,9% y plazos de hasta 60 meses. Respuesta en 24 horas.</p>
+              <a class="btn btn-borde" href="pages/prestamos.html">Solicitar préstamo</a>
+            </div>
+          </article>
+
+          <article class="home-promo">
+            <div class="home-promo__cabecera">5% anual</div>
+            <div class="home-promo__cuerpo">
+              <h3>Ahorro programado</h3>
+              <p>Define una cuota mensual y deja que tu ahorro crezca sin pensar en ello.</p>
+              <a class="btn btn-borde" href="pages/inversiones-ahorros.html">Empezar a ahorrar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CIFRAS ===== -->
+    <section class="seccion seccion--blanca" aria-label="BCA en cifras">
+      <div class="contenedor">
+        <ul class="home-cifras">
+          <li><strong>25 años</strong><span>acompañando a nuestros clientes</span></li>
+          <li><strong>120</strong><span>sucursales en el país</span></li>
+          <li><strong>350</strong><span>cajeros automáticos</span></li>
+          <li><strong>1,2 millones</strong><span>de clientes</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== AVISOS Y SEGURIDAD ===== -->
+    <section class="seccion" aria-labelledby="avisos-titulo">
+      <div class="contenedor home-avisos">
+        <div>
+          <h2 id="avisos-titulo">Novedades</h2>
+          <ul class="home-noticias">
+            <li class="home-noticia">
+              <time datetime="2026-10-20">20 de octubre de 2026</time>
+              <h3>Nuevo horario en sucursales</h3>
+              <p>Ahora atendemos los sábados de 8:00 a 12:00 en las sucursales principales.</p>
+            </li>
+            <li class="home-noticia">
+              <time datetime="2026-10-05">5 de octubre de 2026</time>
+              <h3>Transferencias sin costo entre cuentas BCA</h3>
+              <p>Envía dinero a otras cuentas BCA las 24 horas, todos los días.</p>
+            </li>
+            <li class="home-noticia">
+              <time datetime="2026-09-18">18 de septiembre de 2026</time>
+              <h3>Más puntos en tus compras</h3>
+              <p>El programa de puntos suma nuevos comercios aliados este trimestre.</p>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="home-seguridad" aria-labelledby="seg-titulo">
+          <h3 id="seg-titulo">Cuida tus claves</h3>
+          <ul>
+            <li>BCA nunca te pide tu contraseña por correo, mensaje o llamada.</li>
+            <li>Escribe siempre la dirección del banco; no entres desde enlaces dudosos.</li>
+            <li>Si algo te parece raro, <a href="pages/contacto.html">escríbenos de inmediato</a>.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (plantilla común, no modificar) ===== -->
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="pages/cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="pages/inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="pages/prestamos.html">Préstamos</a></li>
+          <li><a href="pages/beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="pages/nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="pages/sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="pages/faq.html">Preguntas frecuentes</a></li>
+          <li><a href="pages/contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIN FOOTER ===== -->
+</body>
+</html>

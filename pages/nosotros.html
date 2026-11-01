@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Quiénes somos? | BCA</title>
+  <meta name="description" content="Conoce la historia, la misión, la visión y los valores de BCA.">
+
+  <!-- Orden obligatorio: variables > global > header > footer > CSS propio -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/nosotros.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR (plantilla común, no modificar) ===== -->
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="prestamos.html">Préstamos</a></li>
+          <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace" href="sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="nosotros.html" aria-current="page">Nosotros</a></li>
+          <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="login.html">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== FIN NAVBAR ===== -->
+
+  <main id="contenido">
+
+    <section class="nos-hero" aria-labelledby="nos-titulo">
+      <div class="contenedor nos-hero__contenido">
+        <h1 id="nos-titulo">Un banco cercano, construido con nuestros clientes</h1>
+        <p>Desde hace 25 años ayudamos a familias y negocios a ahorrar, invertir y crecer con productos claros y atención de persona a persona.</p>
+      </div>
+    </section>
+
+    <!-- ===== HISTORIA ===== -->
+    <section class="seccion seccion--blanca" aria-labelledby="historia-titulo">
+      <div class="contenedor nos-historia">
+        <div>
+          <h2 id="historia-titulo">Nuestra historia</h2>
+          <p>BCA nació como una pequeña agencia de ahorro para comerciantes de barrio. Con los años crecimos junto a ellos: abrimos nuevas sucursales, lanzamos las primeras tarjetas y llevamos el banco al celular.</p>
+          <p>Hoy seguimos con la misma idea del primer día: que cada persona entienda lo que firma y sepa cuánto paga.</p>
+        </div>
+
+        <ol class="nos-linea" aria-label="Línea de tiempo">
+          <li><strong>2001</strong><p>Abre la primera agencia de ahorro.</p></li>
+          <li><strong>2008</strong><p>Lanzamiento de las tarjetas de débito y crédito BCA.</p></li>
+          <li><strong>2015</strong><p>Llega la banca en línea y la red de cajeros automáticos.</p></li>
+          <li><strong>2020</strong><p>Apertura de cuentas digitales sin visitar la sucursal.</p></li>
+          <li><strong>2026</strong><p>Más de 1,2 millones de clientes en todo el país.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== MISIÓN / VISIÓN / VALORES ===== -->
+    <section class="seccion" aria-labelledby="pilares-titulo">
+      <div class="contenedor">
+        <div class="seccion__intro">
+          <h2 id="pilares-titulo">Lo que nos guía</h2>
+        </div>
+        <div class="nos-pilares">
+          <article class="nos-pilar">
+            <h3>Misión</h3>
+            <p>Ofrecer servicios financieros claros, seguros y accesibles que ayuden a nuestros clientes a alcanzar sus metas.</p>
+          </article>
+          <article class="nos-pilar">
+            <h3>Visión</h3>
+            <p>Ser el banco que las personas recomiendan por su trato, su transparencia y su tecnología sencilla.</p>
+          </article>
+          <article class="nos-pilar">
+            <h3>Valores</h3>
+            <ul>
+              <li>Transparencia</li>
+              <li>Respeto por el cliente</li>
+              <li>Responsabilidad</li>
+              <li>Innovación útil</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CIFRAS ===== -->
+    <section class="nos-cifras" aria-label="BCA en cifras">
+      <div class="contenedor">
+        <ul class="nos-cifras__lista">
+          <li><strong>1,2 millones</strong><span>de clientes</span></li>
+          <li><strong>120</strong><span>sucursales</span></li>
+          <li><strong>350</strong><span>cajeros automáticos</span></li>
+          <li><strong>3 200</strong><span>colaboradores</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== EQUIPO DIRECTIVO ===== -->
+    <section class="seccion" aria-labelledby="equipo-titulo">
+      <div class="contenedor">
+        <div class="seccion__intro">
+          <h2 id="equipo-titulo">Equipo directivo</h2>
+          <p>Personas de ejemplo para la maqueta. Cambien nombres y cargos si lo necesitan.</p>
+        </div>
+        <ul class="nos-equipo">
+        <li class="nos-persona">
+          <div class="nos-persona__foto" aria-hidden="true">AR</div>
+          <h3>Ana Rojas</h3>
+          <p>Gerente general</p>
+        </li>
+        <li class="nos-persona">
+          <div class="nos-persona__foto" aria-hidden="true">CM</div>
+          <h3>Carlos Mora</h3>
+          <p>Gerente de finanzas</p>
+        </li>
+        <li class="nos-persona">
+          <div class="nos-persona__foto" aria-hidden="true">LV</div>
+          <h3>Laura Vargas</h3>
+          <p>Gerente de tecnología</p>
+        </li>
+        <li class="nos-persona">
+          <div class="nos-persona__foto" aria-hidden="true">JP</div>
+          <h3>Jorge Pineda</h3>
+          <p>Gerente de servicio al cliente</p>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (plantilla común, no modificar) ===== -->
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="prestamos.html">Préstamos</a></li>
+          <li><a href="beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIN FOOTER ===== -->
+</body>
+</html>

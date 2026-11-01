@@ -1,0 +1,45 @@
+/* ==========================================================
+   variables.css  |  Responsable: Byron
+   Colores, tipografías y espacios de TODO el proyecto BCA.
+   Úsalos con var(--nombre). No definan colores propios sueltos.
+   ========================================================== */
+:root {
+  /* Colores */
+  --color-tinta: #10231F;          /* fondos oscuros (hero, footer) */
+  --color-primario: #0B6E5C;       /* botones y enlaces principales */
+  --color-primario-oscuro: #084F42;/* hover del primario */
+  --color-acento: #F2B632;         /* destacados y promociones */
+  --color-acento-oscuro: #D99C14;  /* hover del acento */
+  --color-fondo: #F5F8F7;          /* fondo general de las páginas */
+  --color-superficie: #FFFFFF;     /* tarjetas y formularios */
+  --color-texto: #1C2B27;
+  --color-texto-suave: #5A6B66;
+  --color-borde: #D9E2DF;
+  --color-exito: #1E8E5A;
+  --color-error: #C0392B;
+
+  /* Tipografía */
+  --fuente-titulos: "Manrope", "Segoe UI", Arial, sans-serif;
+  --fuente-texto: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+  /* Escala de espacios */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --esp-7: 3rem;
+  --esp-8: 5rem;
+
+  /* Bordes y sombras */
+  --radio-s: 6px;
+  --radio-m: 12px;
+  --radio-l: 20px;
+  --sombra-suave: 0 2px 10px rgba(16, 35, 31, 0.08);
+  --sombra-media: 0 10px 30px rgba(16, 35, 31, 0.14);
+
+  /* Layout */
+  --ancho-max: 1180px;
+  --alto-header: 72px;
+}
