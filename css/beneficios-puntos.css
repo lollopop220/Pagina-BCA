@@ -1,0 +1,77 @@
+/* beneficios-puntos.css | Programa de puntos | prefijo: .puntos- */
+
+/* ---------- Banner ---------- */
+.puntos-hero {
+  background-color: var(--color-tinta);
+  color: var(--color-superficie);
+  padding: 40px 0;
+}
+
+.puntos-saldo {
+  margin-top: 24px;
+  padding: 20px;
+  max-width: 420px;
+  border: 1px solid var(--color-superficie);
+  border-radius: 10px;
+}
+
+.puntos-total {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+/* Barra de puntos: el fondo es la barra y la parte de adentro es el avance */
+.puntos-barra {
+  height: 14px;
+  background-color: var(--color-borde);
+  border-radius: 10px;
+}
+
+.puntos-barra-llena {
+  width: 64%;            /* 3 200 de 5 000 puntos */
+  height: 14px;
+  background-color: var(--color-acento);
+  border-radius: 10px;
+}
+
+/* ---------- Niveles ---------- */
+.puntos-niveles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.puntos-nivel {
+  flex: 1;
+  min-width: 220px;
+  padding: 20px;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-top: 6px solid var(--color-borde);
+  border-radius: 10px;
+}
+
+/* No hay variables para bronce ni plata, por eso esos dos van con el color directo */
+.puntos-bronce { border-top-color: #B4693A; }
+.puntos-plata  { border-top-color: #9AA5B1; }
+.puntos-oro    { border-top-color: var(--color-acento-oscuro); }
+
+/* ---------- Premios ---------- */
+.puntos-premios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.puntos-premio {
+  width: 30%;
+  min-width: 220px;
+  padding: 20px;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+}
+
+.puntos-premio:hover {
+  border-color: var(--color-primario);
+}

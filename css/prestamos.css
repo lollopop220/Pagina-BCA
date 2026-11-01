@@ -1,0 +1,96 @@
+/* prestamos.css | Solicitud de préstamos | prefijo: .prestamo- */
+
+/* ---------- Encabezado ---------- */
+.prestamo-hero {
+  background-color: var(--color-tinta);
+  color: var(--color-superficie);
+  padding: 40px 0;
+}
+
+/* ---------- Tipos de crédito ---------- */
+.prestamo-tipos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.prestamo-tipo {
+  flex: 1;
+  min-width: 220px;
+  padding: 20px;
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-radius: 10px;
+}
+
+.prestamo-tipo:hover {
+  border-color: var(--color-primario);
+}
+
+.prestamo-tipo label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ---------- Formulario + lateral ---------- */
+.prestamo-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.prestamo-form {
+  flex: 2;
+  min-width: 300px;
+}
+
+.prestamo-form div {
+  margin-bottom: 14px;
+}
+
+.prestamo-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.prestamo-form input[type="text"],
+.prestamo-form input[type="email"],
+.prestamo-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+}
+
+.prestamo-form input:focus,
+.prestamo-form select:focus {
+  border-color: var(--color-primario);
+  outline: 3px solid var(--color-acento);
+}
+
+/* ---------- Resumen y requisitos ---------- */
+.prestamo-lateral {
+  flex: 1;
+  min-width: 250px;
+}
+
+.prestamo-resumen {
+  background-color: var(--color-primario);
+  color: var(--color-superficie);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.prestamo-cuota {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.prestamo-requisitos {
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  padding: 20px;
+  border-radius: 10px;
+}

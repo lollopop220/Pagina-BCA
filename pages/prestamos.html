@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitud de préstamos | BCA</title>
+  <meta name="description" content="Solicita tu préstamo personal, hipotecario o vehicular en BCA.">
+
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/prestamos.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="prestamos.html" aria-current="page">Préstamos</a></li>
+          <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace" href="sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="login.html">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main id="contenido">
+
+    <section class="prestamo-hero">
+      <div class="contenedor">
+        <h1>Solicita tu préstamo</h1>
+        <p>Elige el tipo de crédito, completa tus datos y te respondemos en 24 horas.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <h2>¿Qué tipo de crédito necesitas?</h2>
+
+        <div class="prestamo-tipos">
+          <div class="prestamo-tipo">
+            <input id="tipo-personal" name="tipo" type="radio" checked>
+            <label for="tipo-personal">Personal</label>
+            <p>Para lo que necesites. Desde 9,9% anual y hasta 60 meses.</p>
+          </div>
+
+          <div class="prestamo-tipo">
+            <input id="tipo-hipotecario" name="tipo" type="radio">
+            <label for="tipo-hipotecario">Hipotecario</label>
+            <p>Compra o construye tu casa con plazos largos y cuotas fijas.</p>
+          </div>
+
+          <div class="prestamo-tipo">
+            <input id="tipo-vehicular" name="tipo" type="radio">
+            <label for="tipo-vehicular">Vehicular</label>
+            <p>Estrena vehículo con aprobación ágil y financiamiento flexible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--blanca">
+      <div class="contenedor prestamo-layout">
+
+        <form class="prestamo-form" action="#" method="get">
+          <h2>Completa tu solicitud</h2>
+
+          <h3>Datos personales</h3>
+
+          <div>
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Nombre y apellidos" required>
+          </div>
+
+          <div>
+            <label for="identificacion">Número de identificación</label>
+            <input id="identificacion" name="identificacion" type="text" placeholder="0-0000-0000" required>
+          </div>
+
+          <div>
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required>
+          </div>
+
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="text" placeholder="0000-0000">
+          </div>
+
+          <h3>Detalle del crédito</h3>
+
+          <div>
+            <label for="monto">Monto solicitado (USD)</label>
+            <input id="monto" name="monto" type="text" placeholder="Ej. 5000" required>
+          </div>
+
+          <div>
+            <label for="plazo">Plazo</label>
+            <select name="plazo" id="plazo">
+              <option value="12">12 meses</option>
+              <option value="24">24 meses</option>
+              <option value="36">36 meses</option>
+              <option value="48">48 meses</option>
+              <option value="60">60 meses</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="ingresos">Ingresos mensuales (USD)</label>
+            <input id="ingresos" name="ingresos" type="text" placeholder="Ej. 1500" required>
+          </div>
+
+          <button class="btn btn-primario" type="submit">Enviar solicitud</button>
+        </form>
+
+        <div class="prestamo-lateral">
+          <div class="prestamo-resumen">
+            <h3>Resumen de tu cuota</h3>
+            <p class="prestamo-cuota">$ 165,00 al mes</p>
+            <p>Tipo: Personal</p>
+            <p>Monto: $ 5 000</p>
+            <p>Plazo: 36 meses</p>
+            <p>Tasa anual: 9,9%</p>
+            <p>Valores de ejemplo. La cuota final depende de la evaluación.</p>
+          </div>
+
+          <div class="prestamo-requisitos">
+            <h3>Requisitos</h3>
+            <ul>
+              <li>Ser mayor de 18 años</li>
+              <li>Documento de identidad vigente</li>
+              <li>Comprobante de ingresos reciente</li>
+              <li>Recibo de servicio público</li>
+              <li>Historial crediticio al día</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="prestamos.html">Préstamos</a></li>
+          <li><a href="beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
