@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sucursales y cajeros | BCA</title>
-  <meta name="description" content="Encuentra sucursales y cajeros automáticos BCA por provincia, con dirección, horario y servicios.">
+  <title>Sucursales y Cajeros | BCA</title>
+  <meta name="description" content="Encuentra la sucursal o cajero automático de BCA más cercano a ti.">
 
-  <!-- Orden obligatorio: variables > global > header > footer > CSS propio -->
+  <!-- Orden obligatorio de CSS según las reglas del equipo -->
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/components/header.css">
@@ -16,7 +16,7 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- ===== NAVBAR (plantilla común, no modificar) ===== -->
+  <!-- ===== NAVBAR ===== -->
   <header class="site-header">
     <div class="contenedor site-header__fila">
       <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
@@ -33,7 +33,7 @@
           <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
           <li><a class="nav__enlace" href="prestamos.html">Préstamos</a></li>
           <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
-          <li><a class="nav__enlace" href="sucursales.html" aria-current="page">Sucursales</a></li>
+          <li><a class="nav__enlace nav__enlace--activo" href="sucursales.html">Sucursales</a></li>
           <li><a class="nav__enlace" href="nosotros.html">Nosotros</a></li>
           <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
         </ul>
@@ -43,202 +43,75 @@
   </header>
   <!-- ===== FIN NAVBAR ===== -->
 
-  <main id="contenido" class="sucursales">
-
-    <!-- ===== ENCABEZADO ===== -->
-    <section class="sucursales-hero" aria-labelledby="sucursales-titulo">
+  <main id="contenido">
+    <section class="seccion sucursales-hero">
       <div class="contenedor">
-        <h1 id="sucursales-titulo">Sucursales y cajeros</h1>
-        <p>Encuentra el punto BCA más cercano: 120 sucursales y 350 cajeros automáticos en todo el país.</p>
-      </div>
-    </section>
+        <div class="seccion__intro">
+          <h1>Sucursales y cajeros automáticos</h1>
+          <p>Localiza nuestras oficinas y cajeros en todo el país con atención cercana.</p>
+        </div>
 
-    <!-- ===== FILTROS (solo diseño) ===== -->
-    <section class="sucursales-filtros-bloque" aria-label="Filtros de búsqueda">
-      <div class="contenedor">
-        <form class="sucursales-filtros" action="#" method="get">
-          <div class="sucursales-filtro">
-            <label for="suc-provincia">Provincia</label>
-            <select id="suc-provincia" name="provincia">
-              <option>Todas las provincias</option>
-              <option>San José</option>
-              <option>Alajuela</option>
-              <option>Cartago</option>
-              <option>Heredia</option>
-              <option>Guanacaste</option>
-              <option>Puntarenas</option>
-              <option>Limón</option>
+        <!-- Filtros visuales (solo diseño) -->
+        <div class="sucursales-filtros">
+          <div class="sucursales-filtro-grupo">
+            <label for="filtro-provincia">Provincia</label>
+            <select id="filtro-provincia" name="provincia">
+              <option value="todas">Todas las provincias</option>
+              <option value="san-jose">San José</option>
+              <option value="alajuela">Alajuela</option>
+              <option value="cartago">Cartago</option>
+              <option value="heredia">Heredia</option>
             </select>
           </div>
-
-          <fieldset class="sucursales-filtro sucursales-tipo">
-            <legend>Tipo de punto</legend>
-            <input type="radio" id="suc-tipo-todos" name="tipo" checked>
-            <label for="suc-tipo-todos">Todos</label>
-            <input type="radio" id="suc-tipo-sucursal" name="tipo">
-            <label for="suc-tipo-sucursal">Sucursales</label>
-            <input type="radio" id="suc-tipo-cajero" name="tipo">
-            <label for="suc-tipo-cajero">Cajeros</label>
-          </fieldset>
-
-          <div class="sucursales-filtro">
-            <label for="suc-buscar">Buscar por nombre o zona</label>
-            <input id="suc-buscar" name="buscar" type="search" placeholder="Ej. Alajuela centro">
+          <div class="sucursales-filtro-grupo">
+            <label for="filtro-tipo">Tipo de ubicación</label>
+            <select id="filtro-tipo" name="tipo">
+              <option value="todos">Sucursales y Cajeros</option>
+              <option value="sucursal">Solo sucursales</option>
+              <option value="cajero">Solo cajeros 24/7</option>
+            </select>
           </div>
+          <button class="btn btn-acento">Filtrar</button>
+        </div>
 
-          <button class="btn btn-primario sucursales-filtros__boton" type="button">Buscar</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== LISTADO + MAPA ===== -->
-    <section class="seccion" aria-labelledby="suc-listado-titulo">
-      <div class="contenedor sucursales-layout">
-
-        <div>
-          <h2 id="suc-listado-titulo" class="sucursales-listado__titulo">8 puntos de atención</h2>
-          <div class="sucursales-lista">
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Sucursal Central</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--sucursal">Sucursal</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>San José</dd></div>
-                <div><dt>Dirección</dt><dd>Avenida Central, calle 5, edificio BCA, San José</dd></div>
-                <div><dt>Horario</dt><dd>Lun a vie 8:00–17:00 · Sáb 8:00–12:00</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Cajas</li><li>Plataforma de servicios</li><li>Préstamos</li><li>Cajero 24 h</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Sucursal Alajuela</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--sucursal">Sucursal</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>Alajuela</dd></div>
-                <div><dt>Dirección</dt><dd>200 m norte del parque central, Alajuela</dd></div>
-                <div><dt>Horario</dt><dd>Lun a vie 8:00–17:00 · Sáb 8:00–12:00</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Cajas</li><li>Tarjetas</li><li>Inversiones</li><li>Cajero 24 h</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Sucursal Cartago</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--sucursal">Sucursal</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>Cartago</dd></div>
-                <div><dt>Dirección</dt><dd>Frente a las Ruinas, centro de Cartago</dd></div>
-                <div><dt>Horario</dt><dd>Lun a vie 8:30–16:30</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Cajas</li><li>Plataforma de servicios</li><li>Cajero 24 h</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Sucursal Heredia</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--sucursal">Sucursal</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>Heredia</dd></div>
-                <div><dt>Dirección</dt><dd>Costado este de la universidad, Heredia</dd></div>
-                <div><dt>Horario</dt><dd>Lun a vie 8:00–17:00 · Sáb 8:00–12:00</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Cajas</li><li>Préstamos</li><li>Tarjetas</li><li>Cajero 24 h</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Cajero Mall Occidente</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--cajero">Cajero</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>San José</dd></div>
-                <div><dt>Dirección</dt><dd>Primer piso, pasillo principal, Centro Comercial Occidente</dd></div>
-                <div><dt>Horario</dt><dd>Todos los días 6:00–22:00</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Retiros</li><li>Depósitos</li><li>Consulta de saldo</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Cajero Terminal de Buses</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--cajero">Cajero</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>Alajuela</dd></div>
-                <div><dt>Dirección</dt><dd>Entrada principal de la terminal, Alajuela</dd></div>
-                <div><dt>Horario</dt><dd>Abierto 24 horas</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Retiros</li><li>Consulta de saldo</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Sucursal Liberia</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--sucursal">Sucursal</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>Guanacaste</dd></div>
-                <div><dt>Dirección</dt><dd>Diagonal al parque Mario Cañas, Liberia</dd></div>
-                <div><dt>Horario</dt><dd>Lun a vie 8:30–16:30</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Cajas</li><li>Plataforma de servicios</li><li>Cajero 24 h</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
-            <article class="sucursales-tarjeta">
-              <header class="sucursales-tarjeta__cab">
-                <h3>Cajero Puerto de Limón</h3>
-                <span class="sucursales-etiqueta sucursales-etiqueta--cajero">Cajero</span>
-              </header>
-              <dl class="sucursales-datos">
-                <div><dt>Provincia</dt><dd>Limón</dd></div>
-                <div><dt>Dirección</dt><dd>Avenida 2, frente al mercado municipal, Limón</dd></div>
-                <div><dt>Horario</dt><dd>Todos los días 6:00–22:00</dd></div>
-              </dl>
-              <ul class="sucursales-servicios" aria-label="Servicios disponibles"><li>Retiros</li><li>Depósitos</li></ul>
-              <a class="btn btn-borde" href="#">Cómo llegar</a>
-            </article>
-
+        <!-- Imagen de mapa de referencia -->
+        <div class="sucursales-mapa-container" aria-hidden="true">
+          <div class="sucursales-mapa-placeholder">
+            <span>[Mapa interactivo de sucursales y cajeros BCA]</span>
           </div>
         </div>
 
-        <!-- Espacio de mapa: se puede reemplazar por <img src="../img/alonso/mapa-sucursales.png" alt="Mapa de sucursales y cajeros BCA"> -->
-        <aside class="sucursales-mapa" aria-label="Mapa de referencia">
-          <div class="sucursales-mapa__lienzo" role="img" aria-label="Mapa de referencia con la ubicación de sucursales y cajeros">
-            <span class="sucursales-mapa__calle sucursales-mapa__calle--h1"></span>
-            <span class="sucursales-mapa__calle sucursales-mapa__calle--h2"></span>
-            <span class="sucursales-mapa__calle sucursales-mapa__calle--v1"></span>
-            <span class="sucursales-mapa__calle sucursales-mapa__calle--v2"></span>
-            <span class="sucursales-mapa__pin sucursales-mapa__pin--a"></span>
-            <span class="sucursales-mapa__pin sucursales-mapa__pin--b"></span>
-            <span class="sucursales-mapa__pin sucursales-mapa__pin--c"></span>
-            <span class="sucursales-mapa__pin sucursales-mapa__pin--d"></span>
-          </div>
-          <ul class="sucursales-leyenda">
-            <li><span class="sucursales-leyenda__punto sucursales-leyenda__punto--sucursal"></span>Sucursal</li>
-            <li><span class="sucursales-leyenda__punto sucursales-leyenda__punto--cajero"></span>Cajero automático</li>
-          </ul>
-          <p class="sucursales-mapa__nota">¿Dudas sobre un horario? <a href="contacto.html">Contáctanos</a>.</p>
-        </aside>
+        <!-- Lista de ubicaciones en tarjetas -->
+        <div class="sucursales-grid">
+          <article class="sucursal-tarjeta">
+            <div class="sucursal-badge">Sucursal Principal</div>
+            <h3>San José Centro</h3>
+            <p><strong>Dirección:</strong> Av. Central, calles 1 y 3, San José.</p>
+            <p><strong>Horario:</strong> Lunes a viernes de 8:00 a 16:30, Sábados de 8:00 a 12:00.</p>
+            <p><strong>Servicios:</strong> Plataforma de servicios, cajas, cajero 24/7, cambio de moneda.</p>
+          </article>
 
+          <article class="sucursal-tarjeta">
+            <div class="sucursal-badge sucursal-badge--cajero">Cajero 24/7</div>
+            <h3>Cajero Alajuela Mall</h3>
+            <p><strong>Dirección:</strong> Centro Comercial Plaza Real, Alajuela.</p>
+            <p><strong>Horario:</strong> Abierto 24 horas todos los días.</p>
+            <p><strong>Servicios:</strong> Retiros, depósitos, consulta de saldo.</p>
+          </article>
+
+          <article class="sucursal-tarjeta">
+            <div class="sucursal-badge">Sucursal</div>
+            <h3>Heredia Centro</h3>
+            <p><strong>Dirección:</strong> Costado norte del Parque Central de Heredia.</p>
+            <p><strong>Horario:</strong> Lunes a viernes de 8:30 a 16:00.</p>
+            <p><strong>Servicios:</strong> Préstamos, cuentas, atención al cliente.</p>
+          </article>
+        </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ===== FOOTER (plantilla común, no modificar) ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="contenedor site-footer__grid">
       <div>

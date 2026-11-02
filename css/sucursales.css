@@ -1,233 +1,75 @@
-/* =========================================================
-   sucursales.css  |  Persona 5 (Alonso)
-   Prefijo de clases: .sucursales-
-   ========================================================= */
-
-/* Si en variables.css los nombres de colores son otros,
-   cambien SOLO el primer nombre dentro de cada var() */
-.sucursales {
-  --st-primario: var(--color-primario, #0b3b73);
-  --st-acento: var(--color-acento, #f2a900);
-  --st-texto: var(--color-texto, #1d2433);
-  --st-suave: var(--color-fondo-suave, #f3f6fa);
-  --st-borde: var(--color-borde, #d9e0ea);
-  color: var(--st-texto);
-}
-
-/* ---------- Encabezado ---------- */
-.sucursales-hero {
-  background: var(--st-primario);
-  color: #fff;
-  padding: 3.5rem 0 3rem;
-}
-.sucursales-hero h1 {
-  font-size: clamp(1.9rem, 4vw, 2.8rem);
-  line-height: 1.15;
-  margin: 0 0 .75rem;
-}
-.sucursales-hero p { max-width: 55ch; margin: 0; font-size: 1.1rem; opacity: .9; }
-
-/* ---------- Filtros ---------- */
-.sucursales-filtros-bloque {
-  background: #fff;
-  border-bottom: 1px solid var(--st-borde);
-  padding: 1.5rem 0;
-}
+/* Estilos propios para Sucursales y Cajeros */
 .sucursales-filtros {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr 1.2fr auto;
+  display: flex;
   gap: 1rem;
-  align-items: end;
-}
-.sucursales-filtro { margin: 0; padding: 0; border: 0; min-width: 0; }
-.sucursales-filtro label,
-.sucursales-filtro legend {
-  display: block;
-  padding: 0;
-  margin-bottom: .35rem;
-  font-weight: 600;
-  font-size: .95rem;
-}
-.sucursales-filtro select,
-.sucursales-filtro input[type="search"] {
-  width: 100%;
-  padding: .7rem .9rem;
-  font: inherit;
-  color: inherit;
-  background: #fff;
-  border: 1px solid var(--st-borde);
+  background: #f8fafc;
+  padding: 1.5rem;
   border-radius: 8px;
-  transition: border-color .2s, box-shadow .2s;
-}
-.sucursales-filtro select:hover,
-.sucursales-filtro input[type="search"]:hover { border-color: var(--st-primario); }
-.sucursales-filtro select:focus,
-.sucursales-filtro input[type="search"]:focus {
-  outline: none;
-  border-color: var(--st-primario);
-  box-shadow: 0 0 0 3px rgba(11, 59, 115, .25);
-}
-.sucursales-filtros__boton { cursor: pointer; }
-
-/* Selector de tipo: botones tipo píldora hechos con radios */
-.sucursales-tipo { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
-.sucursales-tipo legend { width: 100%; }
-.sucursales-tipo input {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-}
-.sucursales-tipo label {
-  margin: 0;
-  padding: .55rem 1rem;
-  font-weight: 500;
-  border: 1px solid var(--st-borde);
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background .2s, color .2s, border-color .2s;
-}
-.sucursales-tipo label:hover { border-color: var(--st-primario); }
-.sucursales-tipo input:checked + label {
-  background: var(--st-primario);
-  border-color: var(--st-primario);
-  color: #fff;
-}
-.sucursales-tipo input:focus-visible + label {
-  outline: 3px solid var(--st-acento);
-  outline-offset: 2px;
+  margin: 2rem 0;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
-/* ---------- Listado + mapa ---------- */
-.sucursales-layout {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-.sucursales-listado__titulo { margin: 0 0 1.25rem; }
-.sucursales-lista {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-
-.sucursales-tarjeta {
+.sucursales-filtro-grupo {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.25rem;
-  background: #fff;
-  border: 1px solid var(--st-borde);
-  border-radius: 12px;
-  transition: border-color .2s, box-shadow .2s;
+  flex: 1;
+  min-width: 200px;
 }
-.sucursales-tarjeta:hover {
-  border-color: var(--st-primario);
-  box-shadow: 0 6px 18px rgba(11, 59, 115, .12);
-}
-.sucursales-tarjeta__cab {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: .75rem;
-}
-.sucursales-tarjeta__cab h3 { margin: 0; font-size: 1.1rem; }
 
-.sucursales-etiqueta {
-  flex: none;
-  padding: .2rem .65rem;
-  font-size: .8rem;
+.sucursales-filtro-grupo label {
   font-weight: 600;
-  border-radius: 999px;
+  margin-bottom: 0.5rem;
 }
-.sucursales-etiqueta--sucursal { background: var(--st-primario); color: #fff; }
-.sucursales-etiqueta--cajero { background: var(--st-acento); color: #1d2433; }
 
-.sucursales-datos { margin: 0; display: grid; gap: .6rem; }
-.sucursales-datos dt { font-size: .8rem; opacity: .65; }
-.sucursales-datos dd { margin: 0; font-size: .95rem; }
+.sucursales-filtro-grupo select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-.sucursales-servicios {
+.sucursales-mapa-container {
+  margin-bottom: 2rem;
+}
+
+.sucursales-mapa-placeholder {
+  background-color: #e2e8f0;
+  height: 250px;
   display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.sucursales-servicios li {
-  padding: .25rem .65rem;
-  font-size: .82rem;
-  background: var(--st-suave);
-  border: 1px solid var(--st-borde);
-  border-radius: 6px;
-}
-.sucursales-tarjeta .btn { margin-top: auto; align-self: flex-start; }
-
-/* ---------- Mapa (dibujado con CSS) ---------- */
-.sucursales-mapa {
-  position: sticky;
-  top: 1.5rem;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid var(--st-borde);
-  border-radius: 12px;
-}
-.sucursales-mapa__lienzo {
-  position: relative;
-  height: 380px;
-  overflow: hidden;
-  background: #e6edf5;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
+  color: #64748b;
+  font-weight: 600;
 }
-.sucursales-mapa__calle { position: absolute; background: #fff; }
-.sucursales-mapa__calle--h1 { left: 0; right: 0; top: 28%; height: 16px; }
-.sucursales-mapa__calle--h2 { left: 0; right: 0; top: 66%; height: 12px; }
-.sucursales-mapa__calle--v1 { top: 0; bottom: 0; left: 30%; width: 14px; }
-.sucursales-mapa__calle--v2 { top: 0; bottom: 0; left: 70%; width: 16px; }
 
-.sucursales-mapa__pin {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  background: var(--st-primario);
-  border: 3px solid #fff;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+.sucursales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
-.sucursales-mapa__pin--a { left: 24%; top: 20%; }
-.sucursales-mapa__pin--b { left: 62%; top: 38%; background: var(--st-acento); }
-.sucursales-mapa__pin--c { left: 40%; top: 58%; }
-.sucursales-mapa__pin--d { left: 74%; top: 72%; background: var(--st-acento); }
 
-.sucursales-leyenda {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: .9rem 0 .5rem;
-  padding: 0;
-  list-style: none;
-  font-size: .9rem;
+.sucursal-tarjeta {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--color-primario, #004080);
+  position: relative;
 }
-.sucursales-leyenda li { display: flex; align-items: center; gap: .4rem; }
-.sucursales-leyenda__punto { width: 12px; height: 12px; border-radius: 50%; }
-.sucursales-leyenda__punto--sucursal { background: var(--st-primario); }
-.sucursales-leyenda__punto--cajero { background: var(--st-acento); }
-.sucursales-mapa__nota { margin: 0; font-size: .9rem; opacity: .8; }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 1000px) {
-  .sucursales-filtros { grid-template-columns: 1fr 1fr; }
-  .sucursales-layout { grid-template-columns: 1fr; }
-  .sucursales-mapa { position: static; order: -1; }
-  .sucursales-mapa__lienzo { height: 260px; }
+.sucursal-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
-@media (max-width: 620px) {
-  .sucursales-filtros { grid-template-columns: 1fr; }
-  .sucursales-lista { grid-template-columns: 1fr; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .sucursales * { transition: none !important; }
+
+.sucursal-badge--cajero {
+  background: #dcfce7;
+  color: #15803d;
 }
