@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preguntas frecuentes | BCA</title>
+  <meta name="description" content="Respuestas sobre cuentas, tarjetas, banca en línea, préstamos, seguridad y puntos de BCA.">
+
+  <!-- Orden obligatorio: variables > global > header > footer > CSS propio -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/faq.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR (plantilla común, no modificar) ===== -->
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="prestamos.html">Préstamos</a></li>
+          <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace" href="sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="login.html">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== FIN NAVBAR ===== -->
+
+  <main id="contenido" class="faq">
+
+    <!-- ===== ENCABEZADO ===== -->
+    <section class="faq-hero" aria-labelledby="faq-titulo">
+      <div class="contenedor">
+        <h1 id="faq-titulo">Preguntas frecuentes</h1>
+        <p>Respuestas rápidas sobre cuentas, banca en línea, préstamos y seguridad.</p>
+      </div>
+    </section>
+
+    <section class="seccion" aria-label="Preguntas por categoría">
+      <div class="contenedor faq-layout">
+
+        <!-- Índice de categorías -->
+        <nav class="faq-indice" aria-label="Categorías">
+          <h2>Categorías</h2>
+          <ul>
+            <li><a href="#faq-cuentas">Cuentas y tarjetas</a></li>
+            <li><a href="#faq-banca">Banca en línea</a></li>
+            <li><a href="#faq-prestamos">Préstamos</a></li>
+            <li><a href="#faq-seguridad">Seguridad</a></li>
+            <li><a href="#faq-puntos">Puntos y beneficios</a></li>
+          </ul>
+        </nav>
+
+        <div class="faq-contenido">
+
+          <!-- Acordeón hecho solo con CSS: <details> y <summary> -->
+          <section class="faq-grupo" id="faq-cuentas" aria-labelledby="faq-cuentas-t">
+            <h2 id="faq-cuentas-t">Cuentas y tarjetas</h2>
+            <details class="faq-item" open>
+              <summary>¿Qué necesito para abrir una cuenta en BCA?</summary>
+              <p>Una identificación vigente, un comprobante de domicilio y un número de teléfono. La apertura se puede iniciar en línea y terminar en la sucursal que elijas.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuánto cuesta la tarjeta BCA Oro?</summary>
+              <p>El primer año no tiene anualidad. Después se aplica la cuota vigente que verás en el contrato antes de firmar.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué hago si pierdo mi tarjeta?</summary>
+              <p>Llama de inmediato al 2000-0000 para bloquearla. Luego puedes pedir una reposición en cualquier sucursal.</p>
+            </details>
+          </section>
+
+          <section class="faq-grupo" id="faq-banca" aria-labelledby="faq-banca-t">
+            <h2 id="faq-banca-t">Banca en línea</h2>
+            <details class="faq-item">
+              <summary>¿Cómo creo mi usuario de banca en línea?</summary>
+              <p>Entra a la página de inicio de sesión, elige “Crear usuario” y sigue los pasos con tu número de cuenta y tu identificación.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Olvidé mi contraseña, ¿cómo la recupero?</summary>
+              <p>Usa el enlace “Olvidé mi contraseña” en la pantalla de ingreso. Te guiaremos para crear una nueva sin ir a la sucursal.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Las transferencias entre cuentas BCA tienen costo?</summary>
+              <p>No. Puedes enviar dinero a otras cuentas BCA las 24 horas, todos los días, sin cargo.</p>
+            </details>
+          </section>
+
+          <section class="faq-grupo" id="faq-prestamos" aria-labelledby="faq-prestamos-t">
+            <h2 id="faq-prestamos-t">Préstamos</h2>
+            <details class="faq-item">
+              <summary>¿Cuánto tarda la respuesta de un préstamo personal?</summary>
+              <p>Respondemos en 24 horas hábiles después de recibir tu solicitud con todos los documentos.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuál es el plazo máximo?</summary>
+              <p>Los préstamos personales llegan hasta 60 meses. Los plazos de hipotecarios y vehiculares dependen del monto y del producto.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puedo pagar mi préstamo antes de tiempo?</summary>
+              <p>Sí. Puedes hacer abonos extra o cancelar la deuda completa. Consulta en tu contrato cómo se aplica el abono.</p>
+            </details>
+          </section>
+
+          <section class="faq-grupo" id="faq-seguridad" aria-labelledby="faq-seguridad-t">
+            <h2 id="faq-seguridad-t">Seguridad</h2>
+            <details class="faq-item">
+              <summary>¿BCA me pide mi contraseña por correo o llamada?</summary>
+              <p>Nunca. Si alguien te la solicita, no la compartas y avísanos por la página de contacto.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cómo sé que estoy en el sitio oficial?</summary>
+              <p>Escribe siempre la dirección del banco en el navegador y evita entrar desde enlaces de mensajes o correos dudosos.</p>
+            </details>
+          </section>
+
+          <section class="faq-grupo" id="faq-puntos" aria-labelledby="faq-puntos-t">
+            <h2 id="faq-puntos-t">Puntos y beneficios</h2>
+            <details class="faq-item">
+              <summary>¿Cómo acumulo puntos?</summary>
+              <p>Con cada compra que hagas con tu tarjeta BCA. La tarjeta Oro suma 2 puntos por cada dólar.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Dónde puedo canjear mis puntos?</summary>
+              <p>En el catálogo de premios y descuentos con comercios aliados. Cada trimestre se suman nuevos aliados.</p>
+            </details>
+          </section>
+
+          <!-- ===== CAJA FINAL ===== -->
+          <aside class="faq-contacto" aria-labelledby="faq-contacto-titulo">
+            <h2 id="faq-contacto-titulo">¿No encontraste tu respuesta?</h2>
+            <p>Nuestro equipo te ayuda de lunes a viernes, de 8:00 a 17:00.</p>
+            <a class="btn btn-acento" href="contacto.html">Contactar a soporte</a>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (plantilla común, no modificar) ===== -->
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="prestamos.html">Préstamos</a></li>
+          <li><a href="beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIN FOOTER ===== -->
+</body>
+</html>
