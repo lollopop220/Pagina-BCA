@@ -1,0 +1,152 @@
+/* =========================================================
+   faq.css  |  Persona 5 (Alonso)
+   Prefijo de clases: .faq-
+   Acordeón solo con CSS usando <details>/<summary>.
+   ========================================================= */
+
+/* Si en variables.css los nombres de colores son otros,
+   cambien SOLO el primer nombre dentro de cada var() */
+.faq {
+  --ft-primario: var(--color-primario, #0b3b73);
+  --ft-acento: var(--color-acento, #f2a900);
+  --ft-texto: var(--color-texto, #1d2433);
+  --ft-suave: var(--color-fondo-suave, #f3f6fa);
+  --ft-borde: var(--color-borde, #d9e0ea);
+  color: var(--ft-texto);
+}
+
+/* ---------- Encabezado ---------- */
+.faq-hero {
+  background: var(--ft-primario);
+  color: #fff;
+  padding: 3.5rem 0 3rem;
+}
+.faq-hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  margin: 0 0 .75rem;
+}
+.faq-hero p { max-width: 55ch; margin: 0; font-size: 1.1rem; opacity: .9; }
+
+/* ---------- Estructura ---------- */
+.faq-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ---------- Índice ---------- */
+.faq-indice {
+  position: sticky;
+  top: 1.5rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--ft-borde);
+  border-radius: 12px;
+}
+.faq-indice h2 { margin: 0 0 .75rem; font-size: 1.05rem; }
+.faq-indice ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .25rem; }
+.faq-indice a {
+  display: block;
+  padding: .5rem .75rem;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background .2s, color .2s;
+}
+.faq-indice a:hover,
+.faq-indice a:focus-visible {
+  background: var(--ft-primario);
+  color: #fff;
+}
+
+/* ---------- Grupos y acordeón ---------- */
+.faq-grupo { margin-bottom: 2.5rem; scroll-margin-top: 1.5rem; }
+.faq-grupo h2 {
+  margin: 0 0 1rem;
+  padding-bottom: .5rem;
+  font-size: 1.4rem;
+  border-bottom: 3px solid var(--ft-acento);
+  display: inline-block;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--ft-borde);
+  border-radius: 10px;
+  margin-bottom: .75rem;
+  transition: border-color .2s, box-shadow .2s;
+}
+.faq-item:hover { border-color: var(--ft-primario); }
+.faq-item[open] {
+  border-color: var(--ft-primario);
+  box-shadow: 0 4px 14px rgba(11, 59, 115, .1);
+}
+
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--ft-primario);
+  background: var(--ft-suave);
+  border-radius: 50%;
+}
+.faq-item[open] summary::after {
+  content: "\2212";
+  background: var(--ft-primario);
+  color: #fff;
+}
+.faq-item summary:focus-visible {
+  outline: 3px solid var(--ft-acento);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+.faq-item p {
+  margin: 0;
+  padding: 0 1.25rem 1.25rem;
+  max-width: 70ch;
+  line-height: 1.6;
+}
+
+/* ---------- Caja final ---------- */
+.faq-contacto {
+  padding: 2rem;
+  text-align: center;
+  background: var(--ft-primario);
+  color: #fff;
+  border-radius: 12px;
+}
+.faq-contacto h2 { margin: 0 0 .5rem; }
+.faq-contacto p { margin: 0 0 1.25rem; opacity: .9; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .faq-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .faq-indice { position: static; }
+  .faq-indice ul { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .faq-indice ul { grid-template-columns: 1fr; }
+  .faq-item summary { padding: .9rem 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq * { transition: none !important; }
+}
