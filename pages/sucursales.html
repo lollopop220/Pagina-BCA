@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sucursales y Cajeros | BCA</title>
+  <meta name="description" content="Encuentra la sucursal o cajero automático de BCA más cercano a ti.">
+
+  <!-- Orden obligatorio de CSS según las reglas del equipo -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/sucursales.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="prestamos.html">Préstamos</a></li>
+          <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace nav__enlace--activo" href="sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="login.html">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== FIN NAVBAR ===== -->
+
+  <main id="contenido">
+    <section class="seccion sucursales-hero">
+      <div class="contenedor">
+        <div class="seccion__intro">
+          <h1>Sucursales y cajeros automáticos</h1>
+          <p>Localiza nuestras oficinas y cajeros en todo el país con atención cercana.</p>
+        </div>
+
+        <!-- Filtros visuales (solo diseño) -->
+        <div class="sucursales-filtros">
+          <div class="sucursales-filtro-grupo">
+            <label for="filtro-provincia">Provincia</label>
+            <select id="filtro-provincia" name="provincia">
+              <option value="todas">Todas las provincias</option>
+              <option value="san-jose">San José</option>
+              <option value="alajuela">Alajuela</option>
+              <option value="cartago">Cartago</option>
+              <option value="heredia">Heredia</option>
+            </select>
+          </div>
+          <div class="sucursales-filtro-grupo">
+            <label for="filtro-tipo">Tipo de ubicación</label>
+            <select id="filtro-tipo" name="tipo">
+              <option value="todos">Sucursales y Cajeros</option>
+              <option value="sucursal">Solo sucursales</option>
+              <option value="cajero">Solo cajeros 24/7</option>
+            </select>
+          </div>
+          <button class="btn btn-acento">Filtrar</button>
+        </div>
+
+        <!-- Imagen de mapa de referencia -->
+        <div class="sucursales-mapa-container" aria-hidden="true">
+          <div class="sucursales-mapa-placeholder">
+            <span>[Mapa interactivo de sucursales y cajeros BCA]</span>
+          </div>
+        </div>
+
+        <!-- Lista de ubicaciones en tarjetas -->
+        <div class="sucursales-grid">
+          <article class="sucursal-tarjeta">
+            <div class="sucursal-badge">Sucursal Principal</div>
+            <h3>San José Centro</h3>
+            <p><strong>Dirección:</strong> Av. Central, calles 1 y 3, San José.</p>
+            <p><strong>Horario:</strong> Lunes a viernes de 8:00 a 16:30, Sábados de 8:00 a 12:00.</p>
+            <p><strong>Servicios:</strong> Plataforma de servicios, cajas, cajero 24/7, cambio de moneda.</p>
+          </article>
+
+          <article class="sucursal-tarjeta">
+            <div class="sucursal-badge sucursal-badge--cajero">Cajero 24/7</div>
+            <h3>Cajero Alajuela Mall</h3>
+            <p><strong>Dirección:</strong> Centro Comercial Plaza Real, Alajuela.</p>
+            <p><strong>Horario:</strong> Abierto 24 horas todos los días.</p>
+            <p><strong>Servicios:</strong> Retiros, depósitos, consulta de saldo.</p>
+          </article>
+
+          <article class="sucursal-tarjeta">
+            <div class="sucursal-badge">Sucursal</div>
+            <h3>Heredia Centro</h3>
+            <p><strong>Dirección:</strong> Costado norte del Parque Central de Heredia.</p>
+            <p><strong>Horario:</strong> Lunes a viernes de 8:30 a 16:00.</p>
+            <p><strong>Servicios:</strong> Préstamos, cuentas, atención al cliente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="prestamos.html">Préstamos</a></li>
+          <li><a href="beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIN FOOTER ===== -->
+</body>
+</html>
