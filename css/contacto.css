@@ -1,0 +1,59 @@
+/* Estilos propios para la página de Contacto */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contacto-form-container,
+.contacto-tarjeta-info,
+.contacto-mapa-preview {
+  background-color: var(--color-fondo-blanco, #fff);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.contacto-campo {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-campo label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contacto-campo input,
+.contacto-campo textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contacto-redes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contacto-mapa-placeholder {
+  background-color: #e2e8f0;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
