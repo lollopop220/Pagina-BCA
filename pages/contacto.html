@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto y soporte | BCA</title>
+  <meta name="description" content="Escríbenos o llámanos: formulario de contacto, teléfonos, correo, horarios y canales de atención de BCA.">
+
+  <!-- Orden obligatorio: variables > global > header > footer > CSS propio -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR (plantilla común, no modificar) ===== -->
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="prestamos.html">Préstamos</a></li>
+          <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace" href="sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__enlace" href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="login.html">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== FIN NAVBAR ===== -->
+
+  <main id="contenido" class="contacto">
+
+    <!-- ===== ENCABEZADO ===== -->
+    <section class="contacto-hero" aria-labelledby="contacto-titulo">
+      <div class="contenedor">
+        <h1 id="contacto-titulo">Estamos para ayudarte</h1>
+        <p>Escríbenos, llámanos o chatea con nosotros. Respondemos tu consulta el mismo día hábil.</p>
+      </div>
+    </section>
+
+    <!-- ===== FORMULARIO + DATOS ===== -->
+    <section class="seccion" aria-label="Formulario y datos de contacto">
+      <div class="contenedor contacto-layout">
+
+        <div class="contacto-formulario">
+          <h2>Envíanos un mensaje</h2>
+          <p class="contacto-formulario__ayuda">Los campos con * son obligatorios.</p>
+
+          <form action="#" method="post" class="contacto-form">
+            <div class="contacto-campo">
+              <label for="contacto-nombre">Nombre completo *</label>
+              <input id="contacto-nombre" name="nombre" type="text" placeholder="Ej. María Rodríguez" autocomplete="name" required>
+            </div>
+
+            <div class="contacto-campo">
+              <label for="contacto-correo">Correo electrónico *</label>
+              <input id="contacto-correo" name="correo" type="email" placeholder="nombre@correo.com" autocomplete="email" required>
+            </div>
+
+            <div class="contacto-campo">
+              <label for="contacto-asunto">Asunto *</label>
+              <select id="contacto-asunto" name="asunto" required>
+                <option value="">Selecciona un asunto</option>
+                <option>Consulta sobre cuentas o tarjetas</option>
+                <option>Banca en línea</option>
+                <option>Préstamos</option>
+                <option>Reclamo o sugerencia</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="contacto-campo">
+              <label for="contacto-mensaje">Mensaje *</label>
+              <textarea id="contacto-mensaje" name="mensaje" rows="6" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+            </div>
+
+            <p class="contacto-form__aviso">Nunca escribas tu contraseña ni el número completo de tu tarjeta en este formulario.</p>
+
+            <button class="btn btn-primario contacto-form__boton" type="button">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <aside class="contacto-datos" aria-label="Datos de contacto">
+          <article class="contacto-dato">
+            <span class="contacto-dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></svg></span>
+            <div>
+              <h3>Teléfono</h3>
+              <p>2000-0000</p>
+              <p class="contacto-dato__nota">Línea de atención y reporte de tarjetas</p>
+            </div>
+          </article>
+
+          <article class="contacto-dato">
+            <span class="contacto-dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div>
+              <h3>Correo</h3>
+              <p>servicio@bca.example</p>
+              <p class="contacto-dato__nota">Respuesta en menos de 24 horas</p>
+            </div>
+          </article>
+
+          <article class="contacto-dato">
+            <span class="contacto-dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div>
+              <h3>Horarios de atención</h3>
+              <ul class="contacto-horarios">
+                <li><span>Lunes a viernes</span><span>8:00 a 17:00</span></li>
+                <li><span>Sábados (sucursales principales)</span><span>8:00 a 12:00</span></li>
+                <li><span>Banca en línea</span><span>24 horas</span></li>
+              </ul>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== CANALES ===== -->
+    <section class="seccion seccion--blanca" aria-labelledby="canales-titulo">
+      <div class="contenedor">
+        <div class="seccion__intro">
+          <h2 id="canales-titulo">Otros canales</h2>
+          <p>Elige el que te quede más cómodo.</p>
+        </div>
+
+        <div class="contacto-canales">
+          <article class="contacto-canal">
+            <span class="contacto-dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span>
+            <h3>Chat en línea</h3>
+            <p>Habla con un asesor desde la banca en línea, de lunes a viernes.</p>
+            <a class="btn btn-borde" href="login.html">Abrir chat</a>
+          </article>
+
+          <article class="contacto-canal">
+            <span class="contacto-dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></svg></span>
+            <h3>WhatsApp</h3>
+            <p>Consultas rápidas de saldos, horarios y estado de solicitudes.</p>
+            <a class="btn btn-borde" href="#">Escribir por WhatsApp</a>
+          </article>
+
+          <article class="contacto-canal">
+            <span class="contacto-dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <h3>Redes sociales</h3>
+            <p>Síguenos en Facebook, Instagram y LinkedIn para avisos y novedades.</p>
+            <ul class="contacto-redes">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MAPA ===== -->
+    <section class="seccion" aria-labelledby="mapa-titulo">
+      <div class="contenedor">
+        <div class="seccion__intro">
+          <h2 id="mapa-titulo">Visítanos en la oficina central</h2>
+          <p>Avenida Central, calle 5, edificio BCA. Frente al parque principal.</p>
+        </div>
+
+        <!-- Espacio de mapa: se puede reemplazar por <img src="../img/alonso/mapa-contacto.png" alt="Mapa de la oficina central de BCA"> -->
+        <div class="contacto-mapa" role="img" aria-label="Mapa de referencia de la oficina central de BCA">
+          <span class="contacto-mapa__calle contacto-mapa__calle--h1"></span>
+          <span class="contacto-mapa__calle contacto-mapa__calle--h2"></span>
+          <span class="contacto-mapa__calle contacto-mapa__calle--v1"></span>
+          <span class="contacto-mapa__calle contacto-mapa__calle--v2"></span>
+          <span class="contacto-mapa__pin"></span>
+          <span class="contacto-mapa__etiqueta">BCA Oficina Central</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (plantilla común, no modificar) ===== -->
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="prestamos.html">Préstamos</a></li>
+          <li><a href="beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIN FOOTER ===== -->
+</body>
+</html>
