@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión | BCA</title>
+  <meta name="description" content="Inicia sesión en Banca en línea de BCA.">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR (plantilla comun, no modificar) ===== -->
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="prestamos.html">Préstamos</a></li>
+          <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace" href="sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="login.html" aria-current="page">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== FIN NAVBAR ===== -->
+
+  <main id="contenido">
+
+    <section class="loginseccion">
+      <div class="contenedor logingrid">
+
+        <aside class="loginlateral" aria-label="Información de seguridad">
+          <p class="loginlateral__etiqueta">Banca en línea</p>
+          <h2 class="loginlateral__titulo">Tu dinero, bajo control</h2>
+          <p class="loginlateral__texto">Consulta tus cuentas, tarjetas y movimientos desde cualquier lugar, en cualquier momento.</p>
+          <div class="loginmensaje">
+            <strong>Tu seguridad es prioridad.</strong>
+            <span>BCA nunca te pedirá tu contraseña por correo, llamada o mensaje de texto.</span>
+          </div>
+        </aside>
+
+        <article class="logintarjeta">
+          <div class="logintarjeta__encabezado">
+            <span class="logo__marca logintarjeta__marca" aria-hidden="true">B</span>
+            <h1 class="logintitulo">Iniciar sesión</h1>
+            <p class="loginsub">Ingresa tus datos para continuar.</p>
+          </div>
+
+          <div class="loginformulario">
+            <div class="logincampo">
+              <label class="logincampoetiqueta" for="usuario">Usuario</label>
+              <input class="logincampoentrada" type="text" id="usuario" name="usuario" placeholder="Ej. juan.perez" autocomplete="username">
+            </div>
+
+            <div class="logincampo">
+              <label class="logincampoetiqueta" for="clave">Contraseña</label>
+              <input class="logincampoentrada" type="password" id="clave" name="clave" placeholder="••••••••" autocomplete="current-password">
+            </div>
+
+            <button class="loginboton" type="button">Ingresar</button>
+
+            <div class="loginenlaces">
+              <a class="loginenlace" href="#">Olvidé mi contraseña</a>
+              <a class="loginenlace" href="#">Crear usuario</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (plantilla comun, no modificar) ===== -->
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="prestamos.html">Préstamos</a></li>
+          <li><a href="beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIN FOOTER ===== -->
+</body>
+</html>

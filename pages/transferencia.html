@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hacer una transferencia | BCA</title>
+  <meta name="description" content="Vista de referencia para hacer una transferencia en Banca en línea de BCA.">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/transferencia.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR (plantilla común, no modificar) ===== -->
+  <header class="site-header">
+    <div class="contenedor site-header__fila">
+      <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+        <span class="logo__marca" aria-hidden="true">B</span>
+        <span class="logo__texto">BCA</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-toggle" class="menu-boton"><span></span></label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a class="nav__enlace" href="inversiones-ahorros.html">Inversiones</a></li>
+          <li><a class="nav__enlace" href="prestamos.html">Préstamos</a></li>
+          <li><a class="nav__enlace" href="beneficios-puntos.html">Beneficios</a></li>
+          <li><a class="nav__enlace" href="sucursales.html">Sucursales</a></li>
+          <li><a class="nav__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-acento nav__cta" href="login.html">Banca en línea</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== FIN NAVBAR ===== -->
+
+  <main id="contenido">
+
+    <section class="transferenciaseccion">
+      <div class="contenedor">
+
+        <header class="transferenciaencabezado">
+          <p class="transferenciaetiqueta">Banca en línea</p>
+          <h1 class="transferenciatitulo">Hacer una transferencia</h1>
+          <p class="transferenciasub">Completa los datos para enviar dinero a otra cuenta. Esta página es solo de referencia.</p>
+        </header>
+
+        <div class="transferenciagrid">
+
+          <!-- Formulario (solo visual) -->
+          <div class="transferenciaformulario">
+            <h2 class="transferenciasubtitulo">Datos de la transferencia</h2>
+
+            <div class="transferenciacampo">
+              <label class="transferenciacampoetiqueta" for="cuentaorigen">Cuenta origen</label>
+              <select class="transferenciaselect" id="cuentaorigen" name="cuentaorigen">
+                <option>Cuenta corriente colones ····4521</option>
+                <option>Cuenta de ahorro colones ····8803</option>
+                <option>Cuenta en dólares ····137</option>
+              </select>
+            </div>
+
+            <div class="transferenciacampo">
+              <label class="transferenciacampoetiqueta" for="cuentadestino">Cuenta destino</label>
+              <input class="transferenciaentrada" type="text" id="cuentadestino" name="cuentadestino" placeholder="Número de cuenta o IBAN">
+            </div>
+
+            <div class="transferenciafila">
+              <div class="transferenciacampo">
+                <label class="transferenciacampoetiqueta" for="monto">Monto</label>
+                <input class="transferenciaentrada" type="number" id="monto" name="monto" min="0" step="0.01" placeholder="0.00">
+              </div>
+
+              <div class="transferenciacampo">
+                <label class="transferenciacampoetiqueta" for="moneda">Moneda</label>
+                <select class="transferenciaselect" id="moneda" name="moneda">
+                  <option>Colones (₡)</option>
+                  <option>Dólares ($)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="transferenciacampo">
+              <label class="transferenciacampoetiqueta" for="detalle">Detalle (opcional)</label>
+              <textarea class="transferenciaarea" id="detalle" name="detalle" rows="3" placeholder="Ej. Pago de alquiler de noviembre"></textarea>
+            </div>
+
+            <div class="transferenciaacciones">
+              <button class="transferenciabotoncancelar" type="button">Cancelar</button>
+              <button class="transferenciabotonconfirmar" type="button">Confirmar</button>
+            </div>
+          </div>
+
+          <!-- Panel resumen (valores de ejemplo) -->
+          <aside class="transferenciaresumen" aria-label="Resumen de la operación">
+            <h2 class="transferenciasubtitulo">Resumen</h2>
+
+            <div class="transferenciasaldo">
+              <span class="transferenciasaldoetiqueta">Saldo disponible</span>
+              <span class="transferenciasaldovalor">₡ 1.250.000,00</span>
+            </div>
+
+            <dl class="transferenciadetalle">
+              <div class="transferenciaresumenfila">
+                <dt>Cuenta origen</dt>
+                <dd>Corriente ····4521</dd>
+              </div>
+              <div class="transferenciaresumenfila">
+                <dt>Cuenta destino</dt>
+                <dd>Por definir</dd>
+              </div>
+              <div class="transferenciaresumenfila">
+                <dt>Monto</dt>
+                <dd>₡ 0,00</dd>
+              </div>
+              <div class="transferenciaresumenfila">
+                <dt>Comisión</dt>
+                <dd>₡ 0,00</dd>
+              </div>
+            </dl>
+
+            <div class="transferenciaresumentotal">
+              <span>Total a debitar</span>
+              <strong>₡ 0,00</strong>
+            </div>
+
+            <p class="transferencianota">Los valores mostrados son de ejemplo.</p>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (plantilla común, no modificar) ===== -->
+  <footer class="site-footer">
+    <div class="contenedor site-footer__grid">
+      <div>
+        <a class="logo" href="../index.html" aria-label="BCA, ir al inicio">
+          <span class="logo__marca" aria-hidden="true">B</span>
+          <span class="logo__texto">BCA</span>
+        </a>
+        <p class="site-footer__desc">Cuentas, tarjetas, ahorro y crédito con atención cercana y sin letra pequeña.</p>
+        <ul class="site-footer__redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Productos">
+        <h2 class="site-footer__titulo">Productos</h2>
+        <ul class="site-footer__lista">
+          <li><a href="cuentas-tarjetas.html">Cuentas y tarjetas</a></li>
+          <li><a href="inversiones-ahorros.html">Inversiones y ahorros</a></li>
+          <li><a href="prestamos.html">Préstamos</a></li>
+          <li><a href="beneficios-puntos.html">Programa de puntos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="El banco">
+        <h2 class="site-footer__titulo">El banco</h2>
+        <ul class="site-footer__lista">
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="sucursales.html">Sucursales y cajeros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__titulo">Atención al cliente</h2>
+        <address class="site-footer__contacto">
+          <span>Tel. 2000-0000</span>
+          <span>servicio@bca.example</span>
+          <span>Lunes a viernes, 8:00 a 17:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <div class="contenedor">
+        <p>&copy; 2026 BCA. Proyecto académico: no es un banco real.</p>
+        <ul class="site-footer__legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIN FOOTER ===== -->
+</body>
+</html>
